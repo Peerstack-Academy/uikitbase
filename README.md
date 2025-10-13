@@ -1,7 +1,12 @@
-# uikitbase
-Prepare full responsive this site
+# Responsive Navbar with Mobile Menu
 
-Please into this <a href="https://uikitbase.com/demo/html/uhow/html/index.html" target="_blank">Web site link</a>
+Simple responsive navigation bar built with **HTML, CSS, and JavaScript**.
 
+## Features
+- Mobile slide-in menu  
+- Overlay background  
+- Smooth open/close animation  
+- Clean and minimal design  
 
-<a href="https://uikitbase.com/demo/html/uhow/html/index.html" target="_blank">Web site link</a>
+## Usage
+Just open `index.html` in your browser.
