@@ -8,7 +8,6 @@ body {
     font-family: Arial, sans-serif;
 }
 
-/* =================== Header Background =================== */
 .page-wrapper {
 
     background-image: url('img/header-bg-2.png');
@@ -54,95 +53,86 @@ body {
     color: #d1b3ff;
 }
 
-/*==================menu===================*/
 
 .dropdown,
 .dropdown-one,
-.dropdown-menu-two {
-    position: relative;
+.dropdown-two {
+  position: relative;
+  z-index: 10;
+ 
 }
-
 
 .dropdown-menu,
 .dropdown-menu-one,
 .dropdown-menu-two {
-    position: absolute;
-    top: 83%;
-    line-height: 0;
-    background: #fff;
-    color: #d1b3ff;
-    padding: 4px 31px;
-    opacity: 0;
-    visibility: hidden;
-    z-index: 9;
-    pointer-events: none;
-    transition: opacity 0.3s ease, transform 0.3s ease;
-    transform: translateY(10px);
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity .18s ease, transform .18s ease;
+  z-index: 9;
+}
+
+
+.dropdown-menu {
+display: flex;
+  gap: 0 20px;
+  min-width: 360px;
+  left: 50%;
+  transform: translateX(-50%) translateY(0);
+  background: #c9aad4;
+  padding: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  border-radius: 2px;
 }
 
 .dropdown:hover .dropdown-menu,
 .dropdown-one:hover .dropdown-menu-one,
 .dropdown-two:hover .dropdown-menu-two {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-    transform: translateY(0);
-}
-
-.dropdown-menu {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0 30px;
-    min-width: 420px;
-    left: -84px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
 }
 
 
-.dropdown-menu::before {
-    content: "";
-    position: absolute;
-    top: 18px;
-    bottom: 18px;
-    left: 50%;
-    width: 1px;
-    transform: translateX(-50%);
-    background: #f1eaff;
+.dropdown a,
+.dropdown-one a,
+.dropdown-two a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  padding: 8px 12px;
+  display: inline-block;
+  transition: color 0.2s ease;
+}
+
+.dropdown a:hover,
+.dropdown-one a:hover,
+.dropdown-two a:hover {
+  color: #007bff;
 }
 
 
-.dropdown-menu-one {
-    min-width: 170px;
-    height: auto;
-}
-
+.dropdown-menu-one,
 .dropdown-menu-two {
-    min-width: 180px;
-    height: auto;
+  left:50%;
+  transform: translateX(-50%) translateY(0);
+  background:  #c9aad4;
+  padding: 14px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  border-radius: 2px;
+  min-width: 200px;
 }
 
-.dropdown-menu a,
-.dropdown-menu-one a,
-.dropdown-menu-two a {
-    color: #222;
-    text-transform: none;
-    font-weight: 500;
-    padding: 6px 0;
-    display: inline-block;
-    transition: color 0.3s ease;
-}
 
-.dropdown-menu a:hover,
-.dropdown-menu-one a:hover,
-.dropdown-menu-two a:hover {
-    color: #6a35ff;
-}
 
 .buttons .btn {
     text-decoration: none;
     background-color: rgba(255, 255, 255, 0.1);
     padding: 10px 20px;
     border-radius: 30px;
-    color: white;
+    color: rgb(255, 255, 255);
     margin-left: 10px;
     transition: 0.3s;
 }
@@ -544,7 +534,7 @@ body {
 }
 
 /*=================section 4=============*/
-/* CONTACT SUPPORT SECTION */
+
 .support {
     width: 100%;
     height: 350px;
@@ -766,6 +756,10 @@ a:hover {
         padding: 20px 2px;
 
     }
+     .popular-articles {
+        height: 1195px;
+
+    }
 
     .sctn-1 {
 
@@ -784,6 +778,13 @@ a:hover {
 
 
     }
+
+}
+
+@media screen and (max-width:940px) {
+.list__content{
+    display: inline-block;
+}
 
 }
 
@@ -815,7 +816,33 @@ a:hover {
         height: 1192px;
 
     }
+
 }
+@media screen and (max-width:383px) {
+     .popular-articles {
+        height: 1280px;
+
+    }
+    .search-box input {
+
+    width: 197px;
+    font-size: 15px;
+}
+}
+@media screen and (max-width:470px) {
+    
+    .search-box input {
+
+    width: 197px;
+    font-size: 15px;
+}
+    .sctn-1 {
+        height: 2490px;
+    }
+}
+
+
+
 
 /*=====================CONTACT.HTML================*/
 
@@ -874,7 +901,7 @@ main.contact {
   padding: 0 20px 80px;
 }
 
-/* big white card area */
+
 main.contact .card {
   background: #fff;
   border-radius: 4px;
@@ -882,7 +909,6 @@ main.contact .card {
   box-shadow: 0 10px 30px rgba(22,10,40,0.06);
 }
 
-/* Title and lead */
 main.contact h1 {
   margin: 0 0 14px;
   font-size: 34px;
