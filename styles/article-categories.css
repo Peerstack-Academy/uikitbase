@@ -1,0 +1,121 @@
+.section--article-categories {
+    background-color: #f9f7fc;
+}
+
+.article-categories > h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #673ab7;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.article-categories > p {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.article-categories__wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.article-categories__card {
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.article-categories__card > h3 {
+    color: #673ab7;
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 40px;
+    margin-bottom: 15px;
+}
+
+.article-categories__card > p {
+    color: #818892;
+    margin-bottom: 20px;
+}
+
+.article-categories__card > .article-categories__card-icon {
+    width: 130px;
+    height: 130px;
+    background: #faf9fd;
+    font-size: 3em;
+    line-height: 2.8em;
+    color: #673ab7;
+    border: solid 4px #fff;
+    border-radius: 100%;
+    box-shadow: 0 0px 15px #efebf8;
+    display: inline-block;
+}
+
+/* Resoinsive Article Categories*/
+@media (max-width: 900px) {
+    .article-categories__wrapper {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .article-categories__wrapper {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Popular and Latest Articles */
+.section--popular-articles {
+    background-color: #f9f7fc;
+}
+
+.section--popular-articles > .container,
+.section--latest-articles .container{
+    max-width: 1000px;
+}
+
+.section--popular-articles > .container > h2,
+.section--latest-articles > .container > h2 {
+    color: #673ab7;
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 60px;
+}
+
+.section--popular-articles ul,
+.section--latest-articles ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.section--popular-articles .articles-list__item:nth-child(n + 2),
+.section--latest-articles .articles-list__item:nth-child(n + 2) {
+    padding-top: 30px;
+    margin-top: 30px;
+    border-top: 1px solid #efebf8;
+}
+
+.section--popular-articles .article,
+.section--latest-articles .article {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+}
+
+.section--popular-articles .article > .article__header > h3,
+.section--latest-articles .article > .article__header > h3 {
+    color: #673ab7;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.section--popular-articles .article > .article__header > p,
+.section--latest-articles .article > .article__header > p {
+    margin-top: 10px;
+    color: #999999;
+}
