@@ -13,3 +13,23 @@ closeMobileNavBtn.addEventListener("click", () => {
     mobileNav.classList.remove("mobile-nav--open");
     mobileNavOverlay.style.display = "none";
 });
+
+// FAQ Accordion
+const faqItems = document.querySelectorAll(".faq__item");
+const timelinePoints = document.querySelectorAll(".faq__timeline-point");
+
+faqItems.forEach((item, index) => {
+    item.addEventListener("click", () => {
+        const isActive = item.classList.contains("active");
+
+        faqItems.forEach((i) => i.classList.remove("active"));
+        timelinePoints.forEach((p) => p.classList.remove("active"));
+
+        if (!isActive) {
+            item.classList.add("active");
+            if (timelinePoints[index]) {
+                timelinePoints[index].classList.add("active");
+            }
+        }
+    });
+});
