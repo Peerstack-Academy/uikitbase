@@ -25,7 +25,7 @@
 .article-categories__card {
     padding: 30px;
     background-color: #ffffff;
-    border-radius: 8px;
+    border-radius: 5px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     text-align: center;
 }
@@ -58,8 +58,19 @@
 
 /* Resoinsive Article Categories*/
 @media (max-width: 900px) {
+    .article-categories > h2 {
+        font-size: 24px;
+    }
+
     .article-categories__wrapper {
         grid-template-columns: 1fr 1fr;
+    }
+
+    .article-categories__card > .article-categories__card-icon {
+        width: 100px;
+        height: 100px;
+        font-size: 2.5em;
+        line-height: 2.33em;
     }
 }
 
@@ -75,7 +86,7 @@
 }
 
 .section--popular-articles > .container,
-.section--latest-articles .container{
+.section--latest-articles .container {
     max-width: 1000px;
 }
 
@@ -118,4 +129,19 @@
 .section--latest-articles .article > .article__header > p {
     margin-top: 10px;
     color: #999999;
+}
+
+/* Responsive  Popular and Latest Articles*/
+@media (max-width: 768px) {
+    .section--popular-articles > .container > h2,
+    .section--latest-articles > .container > h2 {
+        margin-bottom: 30px;
+    }
+
+    .section--popular-articles .article,
+    .section--latest-articles .article {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
 }
