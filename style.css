@@ -4,6 +4,11 @@
     font-family: 'Roboto', sans-serif;
 }
 
+body {
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
 header {
     width: 100%;
 }
@@ -18,7 +23,7 @@ header {
     position: relative;
     background: url('images/header-bg-2.png');
     background-size: cover;
-    background-position: center;
+    background-position: 50% 0;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
@@ -247,6 +252,12 @@ nav {
     stroke: rgb(103, 58, 183);
 }
 
+input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    appearance: none;
+    display: none;
+}
+
 #down-arrow {
     position: relative;
     width: 100%;
@@ -276,7 +287,6 @@ nav {
 footer {
     padding: 70px;
     background: #f9f7fc;
-    ;
 }
 
 #inner-footer {
@@ -375,7 +385,7 @@ footer {
 
 #mini-menu {
     position: fixed;
-    width: 300px;
+    width: 270px;
     height: 100%;
     background: #3a3c4c;
     box-shadow: -5px 0 15px rgba(0, 0, 0, .1);
@@ -432,33 +442,137 @@ section {
 .inner-section {
     width: 65%;
     margin: 0 auto;
+    padding: 0 15px;
 }
 
-.section-heading{
+.section-heading {
+    text-align: center;
     font-size: 32px;
     color: #673ab7;
-    margin-bottom: 20px;
     text-transform: uppercase;
-    text-align: center;
+    margin-bottom: 20px;
 }
 
-.section-paragraph{
-    font-size: 16x;
-    color: #3a3c4c;
+.section-paragraph {
     margin: 20px 0;
+    color: #3a3c4d;
+    font-size: 16px;
     text-align: center;
-    line-height: 1.6;
 }
 
-.article-box{
-    margin-top: 70px;
+.article-box {
     display: flex;
     flex-wrap: wrap;
+    margin-top: 70px;
 }
 
-.article-col{
-    width: calc(100% * 1 / 3.001);
-    padding-left: 40px;
+.article-col {
+    width: 30%;
+    display: flex;
+    padding-left: calc(10% / 3.001);
+}
+
+.inner-article-col {
+    background: #fff;
+    box-sizing: border-box;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .08);
+    padding: 40px;
+    align-items: center;
+}
+
+.article-icon {
+    border-radius: 100%;
+    width: 130px;
+    height: 130px;
+    line-height: 2.8em;
+    border: solid 4px #fff;
+    display: inline-block;
+    color: #673ab7;
+    text-align: center;
+    box-shadow: 0 0px 15px #efebf8;
+    background: #faf9fd;
+    font-size: 3em;
+}
+
+.article-title {
+    color: #673ab7;
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 24px;
+    margin: 40px 0 20px 0;
+}
+
+.article-title a {
+    text-decoration: none;
+    color: #673ab7;
+}
+
+.article-description {
+    color: #818892;
+    margin: 10px 0 20px 0;
+    font-size: 16px;
+    text-align: center;
+}
+
+.article-link {
+    background-color: #fc6591;
+    border-radius: 30px;
+    transition: .5s;
+    font-weight: bold;
+    margin: 20px 0;
+    font-size: 14px;
+    line-height: 28px;
+    padding: 0 15px;
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+@media (max-width: 1560px) {
+    #search {
+        width: 70%;
+        padding: 0 20px;
+        margin: 0 auto;
+    }
+
+    #outer-nav {
+        width: 70%;
+        padding: 0 20px;
+    }
+
+    #inner-search {
+        margin: 110px 0;
+    }
+
+    #search h1 {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 1340px) {
+    #search {
+        width: 80%;
+        padding: 0 20px;
+        margin: 0 auto;
+    }
+
+    #outer-nav {
+        width: 80%;
+        padding: 0 20px;
+    }
+
+    #inner-search {
+        margin: 90px 0;
+    }
+
+    #search h1 {
+        font-size: 38px;
+    }
 }
 
 @media (max-width: 960px) {
@@ -494,44 +608,35 @@ section {
     }
 }
 
-@media (max-width: 1340px) {
+@media (max-width: 400px) {
     #search {
-        width: 80%;
+        width: 90%;
         padding: 0 20px;
         margin: 0 auto;
     }
 
     #outer-nav {
-        width: 80%;
+        width: 90%;
         padding: 0 20px;
     }
 
     #inner-search {
-        margin: 90px 0;
+        margin: 70px 0;
     }
 
     #search h1 {
-        font-size: 38px;
-    }
-}
-
-@media (max-width: 1560px) {
-    #search {
-        width: 70%;
-        padding: 0 20px;
-        margin: 0 auto;
+        font-size: 36px;
     }
 
-    #outer-nav {
-        width: 70%;
-        padding: 0 20px;
+    #mini-menu {
+        width: 200px;
     }
 
-    #inner-search {
-        margin: 110px 0;
+    footer {
+        padding: 30px;
     }
 
-    #search h1 {
-        font-size: 40px;
+    footer a {
+        font-size: 14px;
     }
 }
