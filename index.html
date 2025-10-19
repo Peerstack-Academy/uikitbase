@@ -205,7 +205,47 @@
 
     <section id="faq">
         <div class="inner-section">
-            
+            <div id="left-faq">
+                <h2 class="">Frequently Asked Questions</h2>
+                <p class="">Lorem Ipsum is simply dummy text of the printing and typesetting
+                    industry.</p>
+
+            </div>
+            <div id="faq-questions">
+                <ul>
+                    <li class="accordion-open">
+                        <a class="accordion-header">Introduction What is the meaning of Lorem ipsum?</a>
+                        <div class="accordion-item">
+                            <p>Literally it does not mean anything. It is a sequence of words without a sense of Latin
+                                derivation that make up a text also known as filler text, fictitious, blind or
+                                placeholder.</p>
+                        </div>
+                    </li>
+                    <li class="">
+                        <a class="accordion-header">Why is Lorem Ipsum Dolor used?</a>
+                        <div class="accordion-item">
+                            <p>The Lorem Ipsum text is used to fill spaces designated to host texts that have not yet
+                                been published. They use programmers, graphic designers, typographers to get a real
+                                impression of the digital / advertising / editorial product they are working on.</p>
+                        </div>
+                    </li>
+                    <li class="">
+                        <a class="accordion-header">What is the most used version?</a>
+                        <div class="accordion-item">
+                            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                                nulla pariatur. Excepteur sint occaecat cupidatat proident.</p>
+                        </div>
+                    </li>
+                    <li class="">
+                        <a class="accordion-header">What are the origins of Lorem Ipsum Dolor Sit?</a>
+                        <div class="accordion-item">
+                            <p>Its origins date back to 45 BC. In fact, his words were randomly extracted from the De
+                                finibus bonorum et malorum , a classic of Latin literature written by Cicero over 2000
+                                years ago.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
     </section>
 
@@ -324,6 +364,27 @@
                 if (event.target === miniMenuOverlay) {
                     miniMenuOverlay.style.display = 'none';
                 }
+            });
+
+            const headers = document.querySelectorAll('.accordion-header');
+
+            headers.forEach(header => {
+                header.addEventListener('click', () => {
+                    const current = header.parentElement;
+                    const isOpen = current.classList.contains('accordion-open');
+                    headers.forEach(h => {
+                        const li = h.parentElement;
+                        if (li !== current) li.classList.remove('accordion-open');
+                    });
+                    if (isOpen) {
+                        current.classList.add('accordion-collapsing');
+                        current.classList.remove('accordion-open');
+
+                        setTimeout(() => current.classList.remove('accordion-collapsing'), 300);
+                    } else {
+                        current.classList.add('accordion-open');
+                    }
+                });
             });
         });
     </script>

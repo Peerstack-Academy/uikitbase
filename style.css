@@ -460,6 +460,10 @@ section {
     text-align: center;
 }
 
+#article {
+    background-color: #f9f7fc;
+}
+
 .article-box {
     display: flex;
     flex-wrap: wrap;
@@ -531,6 +535,150 @@ section {
     text-decoration: none;
     color: #fff;
     text-transform: uppercase;
+}
+
+#faq .inner-section {
+    display: flex;
+    flex-direction: row;
+}
+
+#left-faq {
+    width: 40%;
+    padding-left: 40px;
+}
+
+#left-faq h2 {
+    font-size: 32px;
+    color: #673ab7;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+#left-faq p {
+    color: #3a3c4d;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+#faq-questions {
+    width: 60%;
+    padding-left: 40px;
+}
+
+#faq-questions ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+#faq-questions li {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .08);
+    padding: 20px;
+    background: #fff;
+    position: relative;
+}
+
+#faq-questions li:nth-child(n+2) {
+    margin-top: 20px;
+}
+
+.accordion-open>.accordion-item {
+    display: block !important;
+}
+
+#faq-questions a {
+    color: #3a3c4c;
+    font-weight: 700;
+    font-size: 20px;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    cursor: pointer;
+}
+
+#faq-questions a::before {
+    content: "";
+    width: 1.4em;
+    height: 1.4em;
+    margin-left: 10px;
+    float: right;
+    background-image: url(data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2213%22%20height%3D%2213%22%20viewBox%3D%220%200%2013%2013%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Crect%20fill%3D%22%23666%22%20width%3D%2213%22%20height%3D%221%22%20x%3D%220%22%20y%3D%226%22%20%2F%3E%0A%20%20%20%20%3Crect%20fill%3D%22%23666%22%20width%3D%221%22%20height%3D%2213%22%20x%3D%226%22%20y%3D%220%22%20%2F%3E%0A%3C%2Fsvg%3E);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+.accordion-open>a::before {
+    background-image: url(data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2213%22%20height%3D%2213%22%20viewBox%3D%220%200%2013%2013%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Crect%20fill%3D%22%23666%22%20width%3D%2213%22%20height%3D%221%22%20x%3D%220%22%20y%3D%226%22%20%2F%3E%0A%3C%2Fsvg%3E) !important;
+}
+
+#faq-questions ul::before {
+    content: "";
+    width: 1px;
+    background-color: #673ab7;
+    height: calc(100% - 60px);
+    position: absolute;
+    left: -40px;
+    top: 30px;
+}
+
+#faq-questions li::before {
+    content: "";
+    position: absolute;
+    left: -48px;
+    top: 35px;
+    background-color: #fff;
+    border: 1px solid #673ab7;
+    border-radius: 50px;
+    height: 15px;
+    width: 15px;
+    transform: translateY(-50%);
+}
+
+.accordion-open::after {
+    content: "";
+    position: absolute;
+    left: -44px;
+    top: 35px;
+    background-color: #673ab7;
+    border-radius: 50px;
+    height: 9px;
+    width: 9px;
+    transform: translateY(-50%);
+}
+
+.accordion-open {
+    max-height: 1000px;
+}
+
+.accordion-item {
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    margin-top: 10px;
+    transition:
+        max-height 300ms ease-in-out,
+        opacity 300ms ease-in-out 80ms;
+}
+
+.accordion-open>.accordion-item {
+    max-height: 1000px;
+    opacity: 1;
+}
+
+.accordion-collapsing>.accordion-item {
+    transition:
+        max-height 300ms ease-in-out,
+        opacity 300ms ease-in-out 120ms;
+}
+
+.accordion-item p {
+    width: 100%;
+    text-align: left;
+    color: #3a3c4c;
+    font-size: 16px;
+    line-height: 24px;
 }
 
 @media (max-width: 1560px) {
