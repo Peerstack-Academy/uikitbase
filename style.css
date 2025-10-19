@@ -442,7 +442,7 @@ section {
 .inner-section {
     width: 65%;
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0 40px;
 }
 
 .section-heading {
@@ -679,6 +679,119 @@ section {
     color: #3a3c4c;
     font-size: 16px;
     line-height: 24px;
+}
+
+#popular-articles {
+    background-color: #f9f7fc;
+}
+
+
+#popular-articles .inner-section,
+#latest-articles .inner-section {
+    width: 47%;
+}
+
+#popular-articles h2,
+#latest-articles h2 {
+    color: #673ab7;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 32px;
+}
+
+#popular-articles ul,
+#latest-articles ul {
+    margin-top: 70px;
+    list-style: none;
+}
+
+#popular-articles li,
+#latest-articles li {
+    margin-bottom: 30px;
+}
+
+#popular-articles li:nth-child(n+2),
+#latest-articles li:nth-child(n+2) {
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 1px solid #efebf8;
+}
+
+.p-a-box {
+    display: flex;
+    flex-direction: row;
+}
+
+.p-a-left {
+    width: 40%;
+}
+
+.p-a-left h3 {
+    font-size: 20px;
+    color: #673ab7;
+    margin-bottom: 10px;
+}
+
+.p-a-left h3 a {
+    text-decoration: none;
+    color: #673ab7;
+}
+
+.p-a-left span {
+    font-size: 14px;
+    color: #999999;
+    margin-top: 10px;
+}
+
+.p-a-right {
+    width: 60%;
+    padding-left: 40px;
+}
+
+.p-a-right p {
+    font-size: 16px;
+    color: #3a3c4c;
+    line-height: 24px;
+}
+
+#contact {
+    background-color: #f9f7fc;
+}
+
+#contact h2 {
+    font-size: 32px;
+    color: #3A3C4C;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.contact-info {
+    font-size: 16px;
+    color: #3A3C4C;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.contact-btn-wrapper {
+    margin-top: 70px;
+    text-align: center;
+}
+
+.contact-btn {
+    background-color: #fc6591;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 30px;
+    padding: 0 40px;
+    font-size: 14px;
+    display: inline-block;
+    line-height: 53px;
+    transition: .5s;
+    font-weight: bold;
 }
 
 @media (max-width: 1560px) {
