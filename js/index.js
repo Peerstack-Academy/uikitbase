@@ -16,20 +16,20 @@ closeMobileNavBtn.addEventListener("click", () => {
 
 // FAQ Accordion
 const faqItems = document.querySelectorAll(".faq__item");
-const timelinePoints = document.querySelectorAll(".faq__timeline-point");
+const faqItemsIcons = document.querySelectorAll(".faq__icon");
 
 faqItems.forEach((item, index) => {
     item.addEventListener("click", () => {
         const isActive = item.classList.contains("active");
 
-        faqItems.forEach((i) => i.classList.remove("active"));
-        timelinePoints.forEach((p) => p.classList.remove("active"));
+        faqItems.forEach((item) => item.classList.remove("active"));
+        faqItemsIcons.forEach((item) => (item.textContent = "+"));
+
+        console.log(faqItemsIcons[index]);
 
         if (!isActive) {
             item.classList.add("active");
-            if (timelinePoints[index]) {
-                timelinePoints[index].classList.add("active");
-            }
+            faqItemsIcons[index].textContent = "-";
         }
     });
 });

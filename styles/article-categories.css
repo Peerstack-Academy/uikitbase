@@ -1,10 +1,11 @@
 .section--article-categories {
+    padding-top: 90px;
     background-color: #f9f7fc;
 }
 
 .article-categories > h2 {
     font-size: 32px;
-    font-weight: 700;
+    font-weight: 600;
     color: #673ab7;
     text-align: center;
     text-transform: uppercase;
@@ -44,16 +45,17 @@
 }
 
 .article-categories__card > .article-categories__card-icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     width: 130px;
     height: 130px;
     background: #faf9fd;
     font-size: 3em;
-    line-height: 2.8em;
     color: #673ab7;
     border: solid 4px #fff;
     border-radius: 100%;
     box-shadow: 0 0px 15px #efebf8;
-    display: inline-block;
 }
 
 /* Resoinsive Article Categories*/

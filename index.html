@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="./styles/reset.css" />
         <link rel="stylesheet" href="./styles/global.css" />
         <link rel="stylesheet" href="./styles/home.css" />
+        <link rel="stylesheet" href="./styles/banner.css" />
         <link rel="stylesheet" href="./styles/article-categories.css" />
         <link rel="stylesheet" href="./styles/faq-section.css" />
         <link
@@ -19,42 +20,82 @@
         <title>UHow</title>
     </head>
     <body>
-        <!-- Header -->
-        <header class="header">
-            <div class="container">
-                <div class="header__logo">
-                    <a href="/index.html">
-                        <img src="./images/logo.png" alt="UHow Logo" />
-                    </a>
-                </div>
+        <!-- Banner -->
+        <div class="hero">
+            <div class="banner">
+                <!-- Header -->
+                <header class="header">
+                    <div class="container">
+                        <div class="header__logo">
+                            <a href="/index.html">
+                                <img src="./images/logo.png" alt="UHow Logo" />
+                            </a>
+                        </div>
 
-                <div class="header__right">
-                    <nav class="header__nav">
-                        <ul>
-                            <li><a href aria-expanded="false">Home</a></li>
-                            <li><a href aria-expanded="false">Pages</a></li>
-                            <li><a href aria-expanded="false">FAQ</a></li>
-                            <li><a href aria-expanded="false">Contact</a></li>
-                        </ul>
-                    </nav>
+                        <div class="header__right">
+                            <nav class="header__nav">
+                                <ul>
+                                    <li>
+                                        <a href aria-expanded="false">Home</a>
+                                    </li>
+                                    <li>
+                                        <a href aria-expanded="false">Pages</a>
+                                    </li>
+                                    <li>
+                                        <a href aria-expanded="false">FAQ</a>
+                                    </li>
+                                    <li>
+                                        <a href aria-expanded="false"
+                                            >Contact</a
+                                        >
+                                    </li>
+                                </ul>
+                            </nav>
 
-                    <button
-                        id="menu-open"
-                        class="header__menu-open"
-                        aria-label="Open menu"
-                    >
-                        <i class="fa-solid fa-bars"></i>
-                    </button>
+                            <button
+                                id="menu-open"
+                                class="header__menu-open"
+                                aria-label="Open menu"
+                            >
+                                <i class="fa-solid fa-bars"></i>
+                            </button>
 
-                    <!-- Header Search -->
-                    <div class="header__search">
-                        <a href aria-expanded="false">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                        </a>
+                            <!-- Header Search -->
+                            <div class="header__search">
+                                <a href aria-expanded="false">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+
+                <!-- Banner Info -->
+                <div class="banner__wrapper">
+                    <a href="#article-categories" class="banner__scroll"
+                        ><i class="fa-solid fa-chevron-down"></i
+                    ></a>
+                    <div class="container container--small">
+                        <div class="banner__info">
+                            <h1>Welcome to The Knowledge Base</h1>
+                            <p>How can we help you?</p>
+                        </div>
+                        <div class="banner__search">
+                            <form action="">
+                                <input
+                                    id="search"
+                                    type="text"
+                                    placeholder="Enter Search Term here"
+                                />
+                                <div class="banner__search-icon">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
-        </header>
+        </div>
 
         <!-- Fixed Search -->
         <div class="search--overlay"></div>
@@ -108,7 +149,7 @@
         <main class="main">
             <!-- Article Categories -->
             <section class="section section--article-categories">
-                <div class="container">
+                <div class="container" id="article-categories">
                     <div class="article-categories">
                         <h2>Article Categories</h2>
                         <p>
@@ -220,27 +261,24 @@
             <section class="section section--faq">
                 <div class="container">
                     <div class="faq">
-                        <!-- Левая часть -->
+                        <!-- Left Side -->
                         <div class="faq__left">
                             <h2 class="faq__title">
                                 FREQUENTLY ASKED QUESTIONS
                             </h2>
+
                             <p class="faq__description">
                                 Lorem Ipsum is simply dummy text of the printing
                                 and typesetting industry.
                             </p>
                         </div>
 
-                        <!-- Таймлайн -->
+                        <!-- Timeline -->
                         <div class="faq__timeline">
                             <div class="faq__timeline-line"></div>
-                            <div class="faq__timeline-point"></div>
-                            <div class="faq__timeline-point"></div>
-                            <div class="faq__timeline-point"></div>
-                            <div class="faq__timeline-point"></div>
                         </div>
 
-                        <!-- Правая часть -->
+                        <!-- Right Side -->
                         <div class="faq__right">
                             <div class="faq__item">
                                 <div class="faq__question">
@@ -264,7 +302,7 @@
                             <div class="faq__item">
                                 <div class="faq__question">
                                     <span class="faq__question-text"
-                                        >What is the most used version?</span
+                                        >Why is Lorem Ipsum Dolor used?</span
                                     >
                                     <span class="faq__icon">+</span>
                                 </div>
@@ -283,8 +321,7 @@
                             <div class="faq__item">
                                 <div class="faq__question">
                                     <span class="faq__question-text">
-                                        What are the origins of Lorem Ipsum
-                                        Dolor Sit?
+                                        What is the most used version?
                                     </span>
                                     <span class="faq__icon">+</span>
                                 </div>
@@ -310,7 +347,7 @@
                                     <p>
                                         Its origins date back to 45 BC. In fact,
                                         his words were randomly extracted from
-                                        the *De finibus bonorum et malorum*, a
+                                        the De finibus bonorum et malorum, a
                                         classic of Latin literature written by
                                         Cicero over 2000 years ago.
                                     </p>
