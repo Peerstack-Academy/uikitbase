@@ -201,6 +201,9 @@ nav {
 #inner-search {
     width: 100%;
     margin: 140px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .top-text {
@@ -484,6 +487,10 @@ section {
     padding-left: calc(10% / 3.001);
 }
 
+.article-col:nth-of-type(n+4){
+    margin-top: 40px;
+}
+
 .inner-article-col {
     background: #fff;
     box-sizing: border-box;
@@ -693,7 +700,6 @@ section {
     background-color: #f9f7fc;
 }
 
-
 #popular-articles .inner-section,
 #latest-articles .inner-section {
     width: 47%;
@@ -889,17 +895,21 @@ section {
     #search h1 {
         font-size: 40px;
     }
+
+    .inner-section{
+        width: 75%;
+    }
 }
 
 @media (max-width: 1340px) {
     #search {
-        width: 80%;
+        width: 85%;
         padding: 0 20px;
         margin: 0 auto;
     }
 
     #outer-nav {
-        width: 80%;
+        width: 85%;
         padding: 0 20px;
     }
 
@@ -910,9 +920,47 @@ section {
     #search h1 {
         font-size: 38px;
     }
+
+    .inner-section{
+        width: 85%;
+    }
+}
+
+@media (max-width: 1200px) {
+    #search {
+        width: 90%;
+        padding: 0 20px;
+        margin: 0 auto;
+    }
+
+    #search form{
+        width: 80%;
+    }
+
+    #outer-nav {
+        width: 90%;
+        padding: 0 20px;
+    }
+
+    #inner-search {
+        margin: 90px 0;
+    }
+
+    #search h1 {
+        font-size: 38px;
+    }
+
+    .inner-section{
+        width: 90% !important;
+        padding: 0 20px !important;
+    }
 }
 
 @media (max-width: 960px) {
+    section{
+        padding: 70px 0;
+    }
+
     .bar-menu {
         display: flex;
     }
@@ -942,6 +990,42 @@ section {
 
     #search h1 {
         font-size: 36px;
+    }
+
+    .inner-section{
+        width: 90%;
+    }
+
+    .article-col{
+        width: 47%;
+        padding-left: 3%;
+    }
+
+    .article-col:nth-of-type(n+3){
+        margin-top: 30px;
+    }
+
+    #faq .inner-section{
+        width: 96% !important;
+        flex-direction: column !important;
+        padding: 0 2% !important;
+    }
+
+    #left-faq {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    #faq-questions{
+        margin-top: 40px;
+        width: 100%;
+        padding-left: 0;
+    }
+    
+    #faq li::before,
+    #faq li::after,
+    #faq ul::before{
+        content: none;
     }
 }
 
@@ -975,5 +1059,9 @@ section {
 
     footer a {
         font-size: 14px;
+    }
+
+     .inner-section{
+        width: 95%;
     }
 }
