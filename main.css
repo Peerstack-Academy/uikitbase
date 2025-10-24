@@ -13,13 +13,15 @@ body {
     background-image: url('img/header-bg-2.png');
     background-size: cover;
     color: white;
-    height: 605px;
     width: calc(100% - 40px);
     margin: 0 15px;
-    border-radius: 20px;
-
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
 }
 
+.header-ctr {
+    padding-inline: 10%;
+}
 
 .navbar {
     display: flex;
@@ -57,72 +59,72 @@ body {
 .dropdown,
 .dropdown-one,
 .dropdown-two {
-  position: relative;
-  z-index: 10;
- 
+    position: relative;
+    z-index: 10;
+
 }
 
 .dropdown-menu,
 .dropdown-menu-one,
 .dropdown-menu-two {
-  position: absolute;
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transition: opacity .18s ease, transform .18s ease;
-  z-index: 9;
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity .18s ease, transform .18s ease;
+    z-index: 9;
 }
 
 
 .dropdown-menu {
-display: flex;
-  gap: 0 20px;
-  min-width: 360px;
-  left: 50%;
-  transform: translateX(-50%) translateY(0);
-  background: #c9aad4;
-  padding: 16px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
-  border-radius: 2px;
+    display: flex;
+    gap: 0 20px;
+    min-width: 360px;
+    left: 50%;
+    transform: translateX(-50%) translateY(0);
+    background: #c9aad4;
+    padding: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    border-radius: 2px;
 }
 
 .dropdown:hover .dropdown-menu,
 .dropdown-one:hover .dropdown-menu-one,
 .dropdown-two:hover .dropdown-menu-two {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-  transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
 }
 
 
 .dropdown a,
 .dropdown-one a,
 .dropdown-two a {
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-  padding: 8px 12px;
-  display: inline-block;
-  transition: color 0.2s ease;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    padding: 8px 12px;
+    display: inline-block;
+    transition: color 0.2s ease;
 }
 
 .dropdown a:hover,
 .dropdown-one a:hover,
 .dropdown-two a:hover {
-  color: #007bff;
+    color: #007bff;
 }
 
 
 .dropdown-menu-one,
 .dropdown-menu-two {
-  left:50%;
-  transform: translateX(-50%) translateY(0);
-  background:  #c9aad4;
-  padding: 14px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
-  border-radius: 2px;
-  min-width: 200px;
+    left: 50%;
+    transform: translateX(-50%) translateY(0);
+    background: #c9aad4;
+    padding: 14px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    border-radius: 2px;
+    min-width: 200px;
 }
 
 
@@ -150,7 +152,8 @@ button i {
 
 .hero {
     text-align: center;
-    margin-top: 150px;
+    padding-block: 150px;
+    display: none;
 }
 
 .hero h1 {
@@ -756,7 +759,8 @@ a:hover {
         padding: 20px 2px;
 
     }
-     .popular-articles {
+
+    .popular-articles {
         height: 1195px;
 
     }
@@ -782,9 +786,9 @@ a:hover {
 }
 
 @media screen and (max-width:940px) {
-.list__content{
-    display: inline-block;
-}
+    .list__content {
+        display: inline-block;
+    }
 
 }
 
@@ -818,24 +822,28 @@ a:hover {
     }
 
 }
+
 @media screen and (max-width:383px) {
-     .popular-articles {
+    .popular-articles {
         height: 1280px;
 
     }
+
     .search-box input {
 
-    width: 197px;
-    font-size: 15px;
+        width: 197px;
+        font-size: 15px;
+    }
 }
-}
+
 @media screen and (max-width:470px) {
-    
+
     .search-box input {
 
-    width: 197px;
-    font-size: 15px;
-}
+        width: 197px;
+        font-size: 15px;
+    }
+
     .sctn-1 {
         height: 2490px;
     }
@@ -852,152 +860,290 @@ a:hover {
 
 .navbar {
 
-  color: #fff;
-  padding: 18px 0;
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+    color: #fff;
+    padding: 18px 0;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
 }
+
 .navbar .logo {
-  color: #fff;
-  font-weight:700;
-  font-size:20px;
-  margin-left: 28px;
-  text-decoration:none;
-  display:inline-block;
+    color: #fff;
+    font-weight: 700;
+    font-size: 20px;
+    margin-left: 28px;
+    text-decoration: none;
+    display: inline-block;
 }
+
 .navbar nav {
-  float: right;
-  margin-right: 28px;
+    float: right;
+    margin-right: 28px;
 }
+
 .navbar nav ul {
-  margin:0;
-  padding:0;
-  list-style:none;
-  display:flex;
-  gap:22px;
-  align-items:center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 22px;
+    align-items: center;
 }
+
 .navbar nav a {
-  color: rgba(255,255,255,0.95);
-  text-decoration:none;
-  text-transform:uppercase;
-  font-weight:600;
-  font-size:13px;
-  opacity:0.95;
-  padding:6px 2px;
+    color: rgba(255, 255, 255, 0.95);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 13px;
+    opacity: 0.95;
+    padding: 6px 2px;
 }
+
 .navbar nav a.active {
-  color:#fff;
-  border-bottom:2px solid rgba(255,255,255,0.12);
-  padding-bottom:4px;
+    color: #fff;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.12);
+    padding-bottom: 4px;
 }
 
 
 main.contact {
-  max-width: 1100px;
-  margin: 36px auto;
-  padding: 0 20px 80px;
+    max-width: 1100px;
+    margin: 36px auto;
+    padding: 0 20px 80px;
 }
 
 
 main.contact .card {
-  background: #fff;
-  border-radius: 4px;
-  padding: 44px;
-  box-shadow: 0 10px 30px rgba(22,10,40,0.06);
+    background: #fff;
+    border-radius: 4px;
+    padding: 44px;
+    box-shadow: 0 10px 30px rgba(22, 10, 40, 0.06);
 }
 
 main.contact h1 {
-  margin: 0 0 14px;
-  font-size: 34px;
-  color: #222;
+    margin: 0 0 14px;
+    font-size: 34px;
+    color: #222;
 }
+
 main.contact p {
-  margin: 0 0 28px;
-  color: #666;
-  line-height:1.6;
+    margin: 0 0 28px;
+    color: #666;
+    line-height: 1.6;
 }
 
 
 .card .two-col {
-  display: grid;
-  grid-template-columns: 1fr 320px;
-  gap: 36px;
-  align-items: start;
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 36px;
+    align-items: start;
 }
 
 
-.two-col .contact-form { width:100%; }
+.two-col .contact-form {
+    width: 100%;
+}
 
 .contact-form label {
-  display:block;
-  margin-bottom:6px;
-  color:#444;
-  font-size:13px;
+    display: block;
+    margin-bottom: 6px;
+    color: #444;
+    font-size: 13px;
 }
+
 .contact-form input[type="text"],
 .contact-form input[type="email"],
 .contact-form textarea {
-  width:100%;
-  padding:12px 14px;
-  border:1px solid #efeaf3;
-  border-radius:3px;
-  background: #fff;
-  font-size:14px;
-  color:#333;
-  margin-bottom:16px;
-  outline:none;
-  transition: box-shadow .15s ease, border-color .15s ease;
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #efeaf3;
+    border-radius: 3px;
+    background: #fff;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 16px;
+    outline: none;
+    transition: box-shadow .15s ease, border-color .15s ease;
 }
+
 .contact-form input:focus,
 .contact-form textarea:focus {
-  border-color: rgba(106,53,255,0.22);
-  box-shadow: 0 6px 18px rgba(106,53,255,0.06);
+    border-color: rgba(106, 53, 255, 0.22);
+    box-shadow: 0 6px 18px rgba(106, 53, 255, 0.06);
 }
-.contact-form textarea { min-height:140px; resize:vertical; }
+
+.contact-form textarea {
+    min-height: 140px;
+    resize: vertical;
+}
 
 .contact-form button {
-  background: #ff6b9a;
-  color: #fff;
-  border: none;
-  padding: 10px 22px;
-  border-radius: 22px;
-  font-weight:700;
-  cursor:pointer;
-  box-shadow: 0 6px 18px rgba(255,107,154,0.12);
-  transition: transform .12s ease, box-shadow .12s ease;
+    background: #ff6b9a;
+    color: #fff;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 22px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 6px 18px rgba(255, 107, 154, 0.12);
+    transition: transform .12s ease, box-shadow .12s ease;
 }
-.contact-form button:hover { transform: translateY(-2px); }
+
+.contact-form button:hover {
+    transform: translateY(-2px);
+}
 
 
 .contact-info {
-  font-size:14px;
-  color:#9472f0;
+    font-size: 14px;
+    color: #9472f0;
 }
+
 .contact-info h3 {
-  margin: 0 0 14px;
-  color:#222;
-  font-size:18px;
+    margin: 0 0 14px;
+    color: #222;
+    font-size: 18px;
 }
-.contact-info p { margin: 8px 0; color:#6a35ff; }
+
+.contact-info p {
+    margin: 8px 0;
+    color: #6a35ff;
+}
 
 .breadcrumb {
-  color:#999;
-  font-size:13px;
-  margin-bottom:12px;
+    color: #999;
+    font-size: 13px;
+    margin-bottom: 12px;
 }
 
 /*================ @media screen and=============== */
 @media (max-width: 980px) {
-  .card { padding: 28px; }
-  .card .two-col { grid-template-columns: 1fr; }
-  .navbar .logo { margin-left: 16px; }
-  .navbar nav { margin-right: 16px; }
-  .navbar nav a { margin-left: 10px; font-size:12px; }
+    .card {
+        padding: 28px;
+    }
+
+    .card .two-col {
+        grid-template-columns: 1fr;
+    }
+
+    .navbar .logo {
+        margin-left: 16px;
+    }
+
+    .navbar nav {
+        margin-right: 16px;
+    }
+
+    .navbar nav a {
+        margin-left: 10px;
+        font-size: 12px;
+    }
 }
+
 @media (max-width: 420px) {
-  main.contact h1 { font-size: 22px; }
-  .card { padding: 18px; }
+    main.contact h1 {
+        font-size: 22px;
+    }
+
+    .card {
+        padding: 18px;
+    }
+}
+
+
+#popupLogin {
+    visibility: hidden;
+    z-index: -3;
+}
+
+#popupLogin.active {
+    visibility: visible;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    background-color: white;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .popup-ctr {
+        padding: 50px 30px;
+        width: 280px;
+        height: 280px;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        user-select: none;
+
+        .popup-item {
+            padding-block: 10px;
+
+            label {
+                display: block;
+                width: 80px;
+                margin-bottom: 5px;
+                padding-block: 3px;
+            }
+
+            input {
+                width: 100%;
+                border: none;
+                outline: 0;
+                box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+                padding: 5px;
+            }
+        }
+
+        .popup-controls {
+            padding: 15px 20px;
+
+            button {
+                background-color: #f8f9fa;
+                color: black;
+                font-weight: bold;
+                width: 100%;
+                border: none;
+                padding: 10px 15px;
+                box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+                letter-spacing: 1px;
+                line-height: 18px;
+
+                &:hover {
+                    scale: 1.1;
+                    font-weight: 300;
+                }
+
+                &:active {
+                    scale: 1;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}
+
+#btnClose {
+    position: absolute;
+    display: inline-block;
+    right: 20px;
+    top: 20px;
+    margin-right: 10px;
+
+    svg {
+        width: 48px;
+        height: 48px;
+    }
+
+    &:hover {
+        scale: 1.1;
+        cursor: pointer;
+    }
+
+    &:active {
+        scale: 1;
+    }
 }
