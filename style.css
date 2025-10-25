@@ -568,12 +568,14 @@ section {
     margin-bottom: 20px;
     font-weight: 700;
     text-transform: uppercase;
+    padding-right: 15px;
 }
 
 #left-faq p {
     color: #3a3c4d;
     font-size: 16px;
     margin-top: 20px;
+    padding-right: 15px;
 }
 
 #faq-questions {
