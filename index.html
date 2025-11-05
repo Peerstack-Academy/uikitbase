@@ -9,211 +9,453 @@
 </head>
 <body>
   <div class="page">
-    <header id="tm-header">
+    <header id ="tm-header">
       <div class="uk-background" style="background-image: url(image/header-bg-2.png);">
-        <nav class="tm-main-navbar">
+     
+        <div class="uk-navbar-container">
           <div class="uk-container">
-            <div class="uk-navbar-left">
-              <a href="index.html" class="uk-navbar-item uk-logo">
-                <img src="image/logo.png" alt="Logo">
-              </a>
-            </div>
-            <div class="uk-navbar-center">
-              <ul class="uk-navbar-nav">
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="#">PAGES</a></li>
-                <li><a href="#">FAQ</a></li>
-                <li><a href="#">CONTACT</a></li>
-                <li><a href="#">ELEMENTS</a></li>
-              </ul>
-            </div>
-            <div class="uk-navbar-right">
-              <div class="register">
-                <a href="#" class="uk-text-uppercase">REGISTER</a>
+            <nav class="tm-main-navbar">
+              <div class="uk-navbar-left">
+                <a href="index.html" class="uk-navbar-item uk-logo">
+                  <img src="image/logo.png" alt="">
+                </a>
               </div>
-              <div class="login">
-                <a href="#" class="uk-text-uppercase">LOGIN</a>
+              <div class="uk-navbar-center">
+                <ul class="uk-navbar-nav">
+                  <li><a href="index.html">HOME</a></li>
+                  <li><a href="pages.html">PAGES</a></li>
+                  <li><a href="">FAQ</a></li>
+                  <li><a href="">CONTACT</a></li>
+                  <li><a href="">ELEMENTS</a></li>
+                </ul>
               </div>
-            </div>
+              <div class="uk-navbar-right">
+                <div class="register">
+                  <div class="uk-text-uppercase">
+                    <a href="#">REGISTER</a>
+                  </div>
+                </div>
+                <div class="login">
+                  <div class="uk-text-uppercase">
+                    <a href="#">LOGIN</a>
+                  </div>
+                </div>
+              </div>
+            </nav>
           </div>
-        </nav>
+        </div>
       </div>
-
-      <section class="uk-background-in" style="background-image: url(image/header-bg-2.png)">
+      <div class = "uk-background-in" style="background-image: url(image/header-bg-2.png)">
         <div class="uk-container2">
           <div class="ik-text-center">
             <div class="uk-light">
-              <h1>Welcome to The Knowledge Base</h1>
-              <h4 class="uk-text-muted">How can we help you?</h4>
+              <h1 class="uk-margin-small">Welcome to The Knowledge Base</h1>
+              <h4 class="uk-margin-small uk-text-muted">How can we help you?</h4>
             </div>
             <form method="GET" action="#" class="uk-margin-medium-top">
-              <input class="uk-search-input" type="search" placeholder="Enter search term here" id="autocomplete-input" autocomplete="off">
-              <button type="submit" class="uk-search-icon-flip">
-                <i class="fas fa-search"></i>
+              <div class="easy-autocomplete">
+                <input class="uk-search-input"
+                  type="search"
+                  placeholder="Enter search term here"
+                  id="autocomplete-input"
+                  autocomplete="off">
+                <div class="easy-autocomplete-container" id="eac-container-autocomplete-input">
+                  <ul></ul>
+                </div>
+              </div>
+              <button type="submit" class="uk-search-icon-flip" data-uk-search-icon="icon: search; ratio: 1.3;">
+                <svg width="26" height="26" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" data-svg="search">
+                  <circle fill="none" stroke="#000" stroke-width="1.1" cx="9" cy="9" r="7"></circle>
+                  <path fill="none" stroke="#000" stroke-width="1.1" d="M14,14 L18,18 L14,14 Z"></path>
+                </svg>
               </button>
             </form>
           </div>
         </div>
         <div class="header-button">
-          <a href="#category-section">
-            <i class="fas fa-angle-double-down"></i>
-          </a>
+          <div class="header-button-in">
+            <a href="#category-section" data-uk-scroll="offset: -70">
+              <i class="fas fa-angle-double-down"></i>
+            </a>
         </div>
-      </section>
+      </div>
     </header>
 
-    <main>
-      <section id="category-section">
-        <header class="category-header">
-          <h2>ARTICLE CATEGORIES</h2>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-        </header>
-
-        <div class="all-column">
-          <article class="first-column">
-            <span class="column-icon"><i class="fab fa-pagelines"></i></span>
-            <h3><a href="#">Quick Setup</a></h3>
-            <p>Lorem ipsum dolor sit amet...</p>
-            <a href="#" class="column-button">12 Articles</a>
-          </article>
-
-          <article class="first-column">
-            <span class="column-icon"><i class="fas fa-cut"></i></span>
-            <h3><a href="#">Administration Panel</a></h3>
-            <p>Lorem ipsum dolor sit amet...</p>
-            <a href="#" class="column-button">3 Articles</a>
-          </article>
-
-          <article class="first-column">
-            <span class="column-icon"><i class="fab fa-skyatlas"></i></span>
-            <h3><a href="#">Product Options</a></h3>
-            <p>Lorem ipsum dolor sit amet...</p>
-            <a href="#" class="column-button">24 Articles</a>
-          </article>
+    <section id ="category-section">
+    <div class ="category">
+      <h2 class="category-header-text">ARTICLE CATEGORIES</h2>
+      <p class = "category-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+    <div class = "all-column">
+      <div class ="first-column">
+        <div class ="padding-column">
+          <span class="column-icon">
+            <i class="fab fa-pagelines"></i>
+          </span>
+          <h3 class = "column-header-text">
+           <a href="#">Quick Setup</a>
+          </h3>
+          <p class ="column-text">
+            Lorem ipsum dolor sit amet, vel cu singulis deterruisset. Probo atqui accusata et eum, eu...
+          </p>
+          <a href="#" class="column-button">12 Articles</a>
         </div>
-      </section>
+      </div>
+       <div class ="first-column">
+        <div class ="padding-column">
+          <span class="column-icon">
+            <i class="fas fa-cut"></i>
+          </span>
+          <h3 class = "column-header-text">
+           <a href="#">Administration Panel</a>
+          </h3>
+          <p class ="column-text">
+            Lorem ipsum dolor sit amet, vel cu singulis deterruisset. Probo atqui accusata et eum, eu...
+          </p>
+          <a href="#" class="column-button">3 Articles</a>
+        </div>
+      </div>
+       <div class ="first-column">
+        <div class ="padding-column">
+          <span class="column-icon">
+            <i class="fab fa-skyatlas"></i>
+          </span>
+          <h3 class = "column-header-text">
+           <a href="#">Product Options</a>
+          </h3>
+          <p class ="column-text">
+            Lorem ipsum dolor sit amet, vel cu singulis deterruisset. Probo atqui accusata et eum, eu...
+          </p>
+          <a href="#" class="column-button">24 Articles</a>
+        </div>
+      </div>
+       <div class ="second-column">
+        <div class ="padding-column">
+          <span class="column-icon">
+            <i class="fab fa-gg"></i>
+          </span>
+          <h3 class = "column-header-text">
+           <a href="#">Video Tutorials</a>
+          </h3>
+          <p class ="column-text">
+            Lorem ipsum dolor sit amet, vel cu singulis deterruisset. Probo atqui accusata et eum, eu...
+          </p>
+          <a href="#" class="column-button">16 Articles</a>
+        </div>
+      </div>
+       <div class ="second-column">
+        <div class ="padding-column">
+          <span class="column-icon">
+            <i class="fab fa-ioxhost"></i>
+          </span>
+          <h3 class = "column-header-text">
+           <a href="#">Customization</a>
+          </h3>
+          <p class ="column-text">
+            Lorem ipsum dolor sit amet, vel cu singulis deterruisset. Probo atqui accusata et eum, eu...
+          </p>
+          <a href="#" class="column-button">4 Articles</a>
+        </div>
+      </div>
+       <div class ="second-column">
+        <div class ="padding-column">
+          <span class="column-icon">
+            <i class="fab fa-mixcloud"></i>
+          </span>
+          <h3 class = "column-header-text">
+           <a href="#">Shipping Methods</a>
+          </h3>
+          <p class ="column-text">
+            Lorem ipsum dolor sit amet, vel cu singulis deterruisset. Probo atqui accusata et eum, eu...
+          </p>
+          <a href="#" class="column-button">7 Articles</a>
+        </div>
+      </div>
+    </div>
+    </div>
+    </section>
 
-      <section class="section1">
-        <header>
-          <h2>Frequently asked questions</h2>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-        </header>
+    <section class = "section1">
+      <div class = "section-in1">
+        <div class ="section-inner1">
+          <div class ="section-column1">
+            <h2 class = "section-header1">
+              Frequently asked questions
+            </h2>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
 
-        <ul class="section-catagory-column1">
-          <li class="section-open1">
-            <span class="dot"></span>
-            <button class="section-btn1" data-id="c1" data-ac="false">
-              Introduction — What is the meaning of Lorem ipsum?
-            </button>
-            <div id="c1" hidden>
-              <p>Literally it does not mean anything...</p>
-            </div>
-          </li>
-
-          <li class="section-open1">
-            <span class="dot"></span>
-            <button class="section-btn1" data-id="c2" data-ac="false">
-              Why is Lorem Ipsum Dolor used?
-            </button>
-            <div id="c2" hidden>
-              <p>The Lorem Ipsum text is used to fill spaces...</p>
-            </div>
-          </li>
-
-          <li class="section-open1">
-            <span class="dot"></span>
-            <button class="section-btn1" data-id="c3" data-ac="false">
-              What is the most used version?
-            </button>
-            <div id="c3" hidden>
-              <p>Duis aute irure dolor in reprehenderit...</p>
-            </div>
-          </li>
-
-          <li class="section-open1">
-            <span class="dot"></span>
-            <button class="section-btn1" data-id="c4" data-ac="false">
-              What are the origins of Lorem Ipsum Dolor Sit?
-            </button>
-            <div id="c4" hidden>
-              <p>Its origins date back to 45 BC...</p>
-            </div>
-          </li>
-        </ul>
-      </section>
-
-      <section class="section2">
-        <header><h2>Popular Articles</h2></header>
-        <ul class="section-article-list2">
-          <li>
-            <article>
-              <h3><a href="#">Manage payment settings</a></h3>
-              <p>25 Feb, 2013 in <b>Server & Database</b></p>
-            </article>
-          </li>
-        </ul>
-      </section>
-
-      <section class="section3">
-        <header><h2>Latest Articles</h2></header>
-        <ul class="section-article-list3">
-          <li>
-            <article>
-              <h3><a href="#">Shipping components</a></h3>
-              <p>25 Feb, 2013 in <b>Server & Database</b></p>
-            </article>
-          </li>
-        </ul>
-      </section>
-
-      <section class="section4">
-        <header>
-          <h2>Can't find what you're looking for?</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          <a href="#" class="section-button4">Contact Support</a>
-        </header>
-      </section>
-
-      <section class="section5">
-        <article class="section-in5">
-          <figure>
-            <img src="image/image-1.png" alt="Illustration">
-          </figure>
-          <div class="section-column-left5">
-            <h4><i class="far fa-check-circle"></i> Still Searching? We Can Help!</h4>
-            <p>Contact us and we’ll get back to you as soon as possible.</p>
-            <p><a href="#"><i class="fas fa-arrow-right"></i> Submit A Request</a></p>
           </div>
-        </article>
-      </section>
-    </main>
+          <div class = "section-catagory1">
+            <ul class = "section-catagory-column1">
+              <li class = "section-open1">
+                <span class="dot"></span>
+                <button class="section-btn1" data-id="c1" data-ac="false">
+                  Introduction What is the meaning of Lorem ipsum?
+                </button>
+                 <div id="c1" hidden>
+                   <p>Literally it does not mean anything.
+                     It is a sequence of words without a sense of Latin derivation that make up a text also known as filler text, fictitious, blind or placeholder.</p>
+                 </div>
+              </li>
+              
+              <li class= "section-open1">
+                <span class="dot"></span>
+                <button class="section-btn1" data-id="c2" data-ac="false">
+                  Why is Lorem Ipsum Dolor used?
+                </button>
+                 <div id="c2" hidden>
+                   <p>The Lorem Ipsum text is used to fill spaces designated to host texts that have not yet been published.
+                     They use programmers, graphic designers, typographers to get a real impression of the digital / advertising / editorial product they are working on.</p>
+                 </div>
+              </li>
+              
+              <li class= "section-open1">
+                <span class="dot"></span>
+                <button class="section-btn1" data-id="c3" data-ac="false">
+                  What is the most used version?
+                </button>
+                 <div id="c3" hidden>
+                   <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    Excepteur sint occaecat cupidatat proident.
+                   </p>
+                 </div>
+              </li>
+              
+              <li class= "section-open1">
+                <span class="dot"></span>
+                <button class="section-btn1" data-id="c4" data-ac="false">
+                  What are the origins of Lorem Ipsum Dolor Sit?
+                </button>
+                 <div id="c4" hidden>
+                   <p>Its origins date back to 45 BC. In fact, his words were randomly extracted from the De finibus bonorum et malorum , a classic of Latin literature written by Cicero over 2000 years ago.
+                   </p>
+                 </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section2">
+      <div class="section-in2">
+            <h2 class = "section-header2">
+              Popular Articles
+            </h2>
+            <ul class="section-article-list2">
+              <li>
+                <div class="section-article2">
+                  <h3><a href="#">Manage payment settings</a></h3>
+                  <p>25 Feb, 2013 in <b>Server & Database</b></p>
+                </div>
+                <div class="section-article2-in">
+                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                    Aenean commodo ligula eget dolor. Aenean massa.
+                    Cum sociis natoque penatibus et magnis dis parturient montes, nascetur...</p>
+                </div>
+              </li>
+               <li class="section-article2-li">
+                <div class="section-article2">
+                  <h3><a href="#">Transfer account ownership</a></h3>
+                  <p>24 Feb, 2013 in <b>Website Dev</b></p>
+                </div>
+                <div class="section-article2-in">
+                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                    Aenean commodo ligula eget dolor. Aenean massa.
+                    Cum sociis natoque penatibus et magnis dis parturient montes, nascetur...</p>
+                </div>
+              </li>
+               <li class="section-article2-li">
+                <div class="section-article2">
+                  <h3><a href="#">Downloadable product</a></h3>
+                  <p>23 Feb, 2013 in <b>Website Dev</b></p>
+                </div>
+                <div class="section-article2-in">
+                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                    Aenean commodo ligula eget dolor. Aenean massa.
+                    Cum sociis natoque penatibus et magnis dis parturient montes, nascetur...</p>
+                </div>
+              </li>
+               <li class="section-article2-li">
+                <div class="section-article2">
+                  <h3><a href="#">Pricing and plans guide</a></h3>
+                  <p>22 Feb, 2013 in <b>Advanced Techniques</b></p>
+                </div>
+                <div class="section-article2-in">
+                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                    Aenean commodo ligula eget dolor. Aenean massa.
+                    Cum sociis natoque penatibus et magnis dis parturient montes, nascetur...</p>
+                </div>
+              </li>
+               <li class="section-article2-li">
+                <div class="section-article2">
+                  <h3><a href="#">Setting your company office hours</a></h3>
+                  <p>22 Feb, 2013 in <b>Website Dev</b></p>
+                </div>
+                <div class="section-article2-in">
+                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                    Aenean commodo ligula eget dolor. Aenean massa.
+                    Cum sociis natoque penatibus et magnis dis parturient montes, nascetur...</p>
+                </div>
+              </li>
+            </ul>
+      </div>
+
+    </section>
+
+    <section class="section3">
+     <div class="section-in3">
+            <h2 class = "section-header3">
+              Latest Articles
+            </h2>
+            <ul class="section-article-list3">
+              <li>
+                <div class="section-article3">
+                  <h3><a href="#">Shipping components</a></h3>
+                  <p>25 Feb, 2013 in <b>Server & Database</b></p>
+                </div>
+                <div class="section-article3-in">
+                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                    Aenean commodo ligula eget dolor. Aenean massa.
+                    Cum sociis natoque penatibus et magnis dis parturient montes, nascetur...</p>
+                </div>
+              </li>
+               <li class="section-article3-li">
+                <div class="section-article3">
+                  <h3><a href="#">Increasing server memory</a></h3>
+                  <p>24 Feb, 2013 in <b>Website Dev</b></p>
+                </div>
+                <div class="section-article3-in">
+                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                    Aenean commodo ligula eget dolor. Aenean massa.
+                    Cum sociis natoque penatibus et magnis dis parturient montes, nascetur...</p>
+                </div>
+              </li>
+               <li class="section-article3-li">
+                <div class="section-article3">
+                  <h3><a href="#">Shipping Methods</a></h3>
+                  <p>23 Feb, 2013 in <b>Website Dev</b></p>
+                </div>
+                <div class="section-article3-in">
+                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                    Aenean commodo ligula eget dolor. Aenean massa.
+                    Cum sociis natoque penatibus et magnis dis parturient montes, nascetur...</p>
+                </div>
+              </li>
+               <li class="section-article3-li">
+                <div class="section-article3">
+                  <h3><a href="#">Fully Responsive Design</a></h3>
+                  <p>22 Feb, 2013 in <b>Advanced Techniques</b></p>
+                </div>
+                <div class="section-article3-in">
+                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                    Aenean commodo ligula eget dolor. Aenean massa.
+                    Cum sociis natoque penatibus et magnis dis parturient montes, nascetur...</p>
+                </div>
+              </li>
+               <li class="section-article3-li">
+                <div class="section-article3">
+                  <h3><a href="#">Downloadable product</a></h3>
+                  <p>22 Feb, 2013 in <b>Website Dev</b></p>
+                </div>
+                <div class="section-article3-in">
+                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                    Aenean commodo ligula eget dolor. Aenean massa.
+                    Cum sociis natoque penatibus et magnis dis parturient montes, nascetur...</p>
+                </div>
+              </li>
+            </ul>
+      </div>
+    </section>
+
+    <section class="section4">
+      <div class="section-in4">
+            <h2 class = "section-header4">
+              Can't find what you're looking for?
+            </h2>
+            <p class="section-text4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+            <a href="#" class="section-button4">Contact Support</a>
+      </div>
+    </section>
+
+    <section class="section5">
+      <div class="section-in5">
+        <div class = "section-inner5">
+          <div class="section-column-right5">
+            <img src="image/image-1.png" alt="">
+          </div>
+          <div class="section-column-left5">
+            <div class="section-text-left5">
+              <div class ="section-column5-first">
+                <h4 class="section-header5">
+                  <i class="far fa-check-circle"></i>
+                  Still Searching? We Can Help!
+                </h4>
+                <p>Contact us and we’ll get back to you as soon as possible.</p>
+                <p class = "section-description5">
+                  <a href="#">
+                    <i class ="fas fa-arrow-right"></i>
+                     Submit A Request
+                  </a>
+
+                </p>
+              </div>
+              <div class ="section-column5-first">
+                <h4 class="section-header5">
+                  <i class="far fa-check-circle"></i>
+                  Visit The Community
+                </h4>
+                <p>Have questions? Find answers from our Community.</p>
+                <p class = "section-description5">
+                  <a href="#">
+                    <i class ="fas fa-arrow-right"></i>
+                     Find Answers
+                  </a>
+                </p>
+              </div>
+              <div class ="section-column5-third">
+                <h4 class="section-header5">
+                  <i class="far fa-check-circle"></i>
+                  Visit Our Blog
+                </h4>
+                <p>Visit our blog if you’re looking for great articles or inspiration.</p>
+                <p class = "section-description5">
+                  <a href="#">
+                    <i class ="fas fa-arrow-right"></i>
+                     Visit Blog
+                  </a>
+                </p>
+              </div>
+    </section>
+            
 
     <footer class="uk-footer">
-      <address>
-        <p>Sonya Jordan, Ap #443-336 Ullamcorper. Street, Visalia VA 54886</p>
-        <p><a href="mailto:info@domain.tld">info@domain.tld</a></p>
-      </address>
-
-      <ul class="tm-socials">
-        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-        <li><a href="#"><i class="fab fa-vimeo"></i></a></li>
-        <li><a href="#"><i class="fab fa-google-plus"></i></a></li>
-        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-        <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-      </ul>
-
-      <nav class="footer-nav">
-        <ul>
-          <li><a href="index.html">Homepage</a></li>
-          <li><a href="#">FAQ</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
-
-      <a href="#tm-header" class="footer-button">
-        <i class="fas fa-arrow-up"></i>
-      </a>
+      <div class="uk-footer-container">
+              <div class="uk-margin">
+                <p>Sonya Jordan, Ap #443-336 Ullamcorper. Street, Visalia VA 54886</p>
+                <p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="8be2e5ede4cbefe4e6eae2e5a5ffe7ef">info@domain.tld</a></p>
+                <ul class="tm-socials">
+                  <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                  <li><a href="#"><i class="fab fa-vimeo"></i></a></li>
+                  <li><a href="#"><i class="fab fa-google-plus"></i></a></li>
+                  <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                  <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                  <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                </ul>
+              </div>
+              <div class="footer-button">
+          <div class="footer-button-in">
+            <a href="#tm-header" data-uk-scroll="offset: -70">
+              <i class="fas fa-arrow-up"></i>
+            </a>
+        
+            <div class="uk-text-center">
+              <ul class="uk-subnav">
+                <li><a href="index.html">Homepage</a></li>
+                <li><a href="">FAQ</a></li>
+                <li><a href="">Contact</a></li>
+              </ul>
+              </div>
+          </div>
     </footer>
   </div>
   <script src="./sectionbutton.js"></script>
