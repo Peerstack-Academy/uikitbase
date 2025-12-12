@@ -67,6 +67,46 @@ body {
     font-weight: 300;
     padding: 5px 10px;
     z-index: 1;
+    position:relative;
+    cursor:pointer;
+    
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;   
+    margin-top: 10px;          
+    left: 0;                 
+    transform: translateY(5px);
+    background-color: rgb(255, 255, 255);
+    padding: 10px 0;
+    min-width: 160px;
+    text-align: center;
+    
+    z-index: 999;
+}
+
+
+.dropdown a {
+    display: block;
+    padding: 10px;
+    color: black;
+    font-family: "Roboto", sans-serif;
+    text-decoration: none;
+}
+
+.dropdown a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.navbar {
+    position: relative;  
+}
+
+.has-dropdown:hover + .dropdown,
+.dropdown:hover {
+    display: block;
 }
 
 
@@ -90,6 +130,8 @@ body {
     transition: 0.3s ease;
     height:50px;
     margin-top:9px;
+        cursor: pointer;
+
 }
 
 .auth-btn:hover {
@@ -139,10 +181,30 @@ h1{
     transform: translateX(-50%); 
     width: 100%;       
     height: 25%;
-    background-color: rgba(13, 6, 6, 0.179);
+    background-color: rgba(13, 6, 6, 0.109);
 
     display: flex;
     justify-content: center; 
     align-items: center;     
     flex-direction: column;
+}
+
+
+.footertext{
+    color:rgba(0, 0, 0, 0.743);
+    font-family: "Roboto", sans-serif;
+
+}
+
+.social{
+    display:flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.footernav{
+    display:flex;
+    flex-direction: row;
+    gap:10px;
+    margin-top:10px;
 }
